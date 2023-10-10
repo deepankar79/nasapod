@@ -14,6 +14,36 @@
     <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
   </head>
   <body>
+    <!-- Loader -->
+    <div class="loader hidden">
+      <img src="rocket.svg" alt="Rocket loader" />
+    </div>
+    <!-- Container -->
+    <div class="container">
+      <!-- Navigation -->
+      <div class="navigation-container">
+        <span class="background"></span>
+        <!-- Results -->
+        <span class="navigation-items" id="resultsNav">
+          <h3 class="clickable" onclick="updateDOM(favorites)">Favorites</h3>
+          <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+          <h3 class="clickable" onclick="getNasaPictures()">Load More</h3>
+        </span>
+        <!-- Favories nav -->
+        <span class="navigation-items hidden" id="favoritesNav">
+          <h3 class="clickable" onclick="getNasaPictures()">
+            Load More Nasa images
+          </h3>
+        </span>
+      </div>
+      <!-- Images Container -->
+      <div class="images-container"></div>
+    </div>
+    <!-- Save confirmation -->
+    <div class="save-confirmed" hidden>
+      <h1>ADDED!</h1>
+    </div>
+
     <!-- Script -->
     <script src="script.js"></script>
   </body>
